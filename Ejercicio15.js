@@ -12,6 +12,7 @@ const fantasticFour = [
 ];
 
 function swap(array,i1,i2){
+  if ((i1 > array.length -1)||(i2 > array.length -1)){return array};
   const newArray = [...array];
   newArray[i1] = array[i2];
   newArray[i2] = array[i1];
@@ -20,3 +21,15 @@ function swap(array,i1,i2){
 
 const swapedArray = swap(fantasticFour,0,2);
 console.log(swapedArray);
+
+/**
+ * Alternativa:
+ * 
+const swap = (array, index1, index2) => {
+  const temp = array[index1];
+  array[index1] = array[index2];
+  array[index2] = temp;
+
+  return array;
+};
+ */

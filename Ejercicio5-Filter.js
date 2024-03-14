@@ -23,7 +23,7 @@ const streamers = [
 	{name: 'Reven', age: 43, gameMorePlayed: 'League of Legends'},
 	{name: 'AuronPlay', age: 33, gameMorePlayed: 'Among Us'}
 ];
-const LoLStreamers = streamers.filter(streamer => streamer.gameMorePlayed);
+const LoLStreamers = streamers.filter(streamer => streamer.gameMorePlayed === 'League of Legends');
 console.log(LoLStreamers);
 /*5.4 Dado el siguiente array, utiliza .filter() para generar un nuevo array 
 con los streamers que incluyan el caracter 'u' en su propiedad .name. Recomendamos 
@@ -46,9 +46,11 @@ Además, pon el valor de la propiedad .gameMorePlayed a MAYUSCULAS cuando
 .age sea mayor que 35.
 */
 
-const filterStreamers = streamers.filter(streamer => streamer.gameMorePlayed.includes('Legends'));
-const filterStreamersUpper = filterStreamers.map(streamer => {
-	streamer.name = streamer.name.toUpperCase();
-	return streamer;
-})
-console.log(filterStreamersUpper);
+const filterStreamers = streamers.filter(streamer => {
+	if (streamer.gameMorePlayed.includes('Legends')){
+		if (streamer.age > 35){
+			streamer.gameMorePlayed = streamer.gameMorePlayed.toUpperCase();
+		}
+	}
+});
+console.log(filterStreamers);

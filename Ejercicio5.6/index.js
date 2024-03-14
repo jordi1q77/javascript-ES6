@@ -12,6 +12,6 @@ const streamers = [
 const input = document.querySelector("[data-function='toFilterStreamers']");
 console.log(input);
 function toFilterStreamers(event) {
-	console.log(streamers.filter(streamer => streamer.name.includes(event.srcElement.value)))
+	console.log(streamers.filter(streamer => streamer.name.toLowerCase().includes(event.srcElement.value)))
 }
 input.addEventListener("keyup", toFilterStreamers);

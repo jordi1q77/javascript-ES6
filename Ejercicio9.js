@@ -35,3 +35,16 @@ for (const movie of movies) {
 categories = [...new Set(categories)];
 
 console.log(categories);
+
+/**
+ * Alternativa
+ * const uniqueCategories = [];
+
+for (const movie of movies) {
+  for (const category of movie.categories) {
+    if (!uniqueCategories.includes(category)) {
+      uniqueCategories.push(category);
+    }
+  }
+}
+ */

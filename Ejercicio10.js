@@ -46,3 +46,18 @@ for (const user of users) {
 }
 const media = volumens.reduce((acum,volume) => acum + volume/ volumens.length,0);
 console.log(media);
+/**
+ * Alternativa:
+ * 
+let totalVolume = 0;
+let soundCount = 0;
+
+for (const user of users) {
+  for (const sound in user.favoritesSounds) {
+    totalVolume += user.favoritesSounds[sound].volume;
+    soundCount++;
+  }
+}
+
+const averageVolume = totalVolume / soundCount;
+ */

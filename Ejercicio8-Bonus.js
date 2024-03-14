@@ -15,6 +15,10 @@ const videogames = [
 const rpgGames = videogames.filter((videogame) => {
     return videogame.genders.some(gender => gender === "RPG");
 });
+/**
+ * Alternativa:
+ * const rpgGames = videogames.filter((game) => game.genders.includes("RPG"));
+ */
 
 const score = rpgGames.reduce((acum,rpgGame) => acum + rpgGame.score / rpgGames.length,0);
 

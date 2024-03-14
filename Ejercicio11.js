@@ -61,3 +61,18 @@ for (const user of users) {
   }
 }
 console.log(favorites);
+/**
+ * Alternativa
+ * const soundCount = {};
+
+for (const user of users) {
+  for (const sound in user.favoritesSounds) {
+    const soundName = sound;
+    if (soundCount[soundName]) {
+      soundCount[soundName]++;
+    } else {
+      soundCount[soundName] = 1;
+    }
+  }
+}
+ */

@@ -22,11 +22,10 @@ alumnos que esten aprobados usando la función .reduce().
 */
 
 const sumAprobados = exams.reduce((acum, alumno) => {
-    if (alumno.score < 5) {
-        return acum + 0;
-    }else{
+    if (alumno.score >= 5) {
         return acum + alumno.score;
     }
+    return acum;
 }, 0);
 console.log(sumAprobados);
 /*

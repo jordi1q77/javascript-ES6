@@ -33,6 +33,9 @@ pero sin editar el array inicial. De nuevo, usando spread operatos.
 const colors = ['rojo', 'azul', 'amarillo', 'verde', 'naranja'];
 const  [cero, uno,,...resto] = colors;
 const colorsNoYellow = [cero,uno,...resto];
-
+/*otra opción
+const copyColors = [...colors];
+copyColors.splice(2, 1);
+*/
 console.log(colorsNoYellow);
 

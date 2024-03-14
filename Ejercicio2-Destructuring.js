@@ -23,8 +23,8 @@ variables igualandolo a la función e imprimiendolo por consola.
 const animalFunction = () => {
     return {name: 'Bengal Tiger', race: 'Tiger'}
 };
-const {name, race} = animalFunction();
-console.log(name,race);
+const {nameAnimal, race} = animalFunction();
+console.log(nameAnimal,race);
 /*
 2.4 En base al siguiente javascript, usa destructuring para crear las 
 variables name y itv con sus respectivos valores. Posteriormente crea 
